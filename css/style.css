@@ -12,10 +12,8 @@ body {
 	height: 100%;
 }
 .swiper-container,.swiper-wrapper {
-	max-height: 100%;
 }
 .swiper-slide {
-	max-height: 100%;
 	padding: 0 5px;
 	box-sizing: border-box;
 }
