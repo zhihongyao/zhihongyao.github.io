@@ -4,23 +4,100 @@ body {
 	margin: 0;
 	padding: 0;
 }
+h4,p {
+	margin: 0;
+}
+html{font-size:16px}
+@media screen and (max-width:320px){html{font-size:12px}}
+@media screen and (min-width:321px) and (max-width:375px){html{font-size:14px}}
+@media screen and (min-width:376px) and (max-width:414px){html{font-size:15px}}
+@media screen and (min-width:415px) and (max-width:639px){html{font-size:15px}}
+@media screen and (min-width:640px){html{font-size:16px}}
+.show {
+	display: block;
+}
 
+.hide {
+	display: none;
+}
+
+.height-full {
+	height: 100%;
+}
+
+.list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	max-width: 900px;
+	margin: 0 auto;
+}
+.list-item {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	min-width: 50%;
+	padding: 1rem;
+	font-size: 1.1rem;
+	box-sizing: border-box;
+}
+.list-item-hd {
+	width: 5rem;
+}
+.logo-image {
+	width: 100%;
+	height: 100%;
+}
+.list-item-bd {
+	
+}
+.unselectable {
+	 -webkit-touch-callout:none;
+    -moz-touch-callout:none;
+    -ms-touch-callout:none;
+      touch-callout:none;
+	-webkit-touch-callout: none;/* iOS Safari */
+	-webkit-user-select: none;/* Chrome/Safari/Opera */
+	-khtml-user-select: none;/* Konqueror */
+	-moz-user-select: none;/* Firefox */
+	-ms-user-select: none;/* Internet Explorer/Edge */
+	user-select: none;/* Non-prefixed version, currently not supported by any browser */
+}
+@media screen and (max-width:900px){
+	.list {
+		flex-direction: column;
+	}
+}
 .page {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100%;
+	background-color: #f1f1f1;
 }
-.swiper-container,.swiper-wrapper {
+
+.swiper-container {
+	height: 100%;
 }
-.swiper-slide {
-	padding: 0 5px;
-	box-sizing: border-box;
-}
-.swiper-pagination {
-	font-size: 32px !important;
-}
+
 .screenshot {
+	display: block;
 	max-width: 100%;
 	max-height: 100%;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+@media only screen and (min-width: 982px) {
+	.page {
+		width: 980px;
+		margin: auto;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+	.screenshot {
+		padding: 0 5px;
+	}
 }
