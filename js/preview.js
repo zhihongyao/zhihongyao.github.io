@@ -16,8 +16,8 @@ function isIpad() {
 	}
 }
 function getQueryString(name) {
-	let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
-	let r = location.search.substr(1).match(reg);
+	var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+	var r = location.search.substr(1).match(reg);
 	if (r != null)
 		return decodeURI(r[2]);
 	return null;
@@ -37,7 +37,7 @@ var swiperOpts = {
 	observer: true,
 	observeParents: true,
 };
-let Lengths = {
+var Lengths = {
 	'student': 32,
 	'coach': 15,
 };
@@ -58,12 +58,12 @@ if(innerWidth > 982) {
 appendImages();
 new Swiper('.swiper-container', swiperOpts);
 function appendImages() {
-	let hash = location.hash.replace('#', '');
+	var hash = location.hash.replace('#', '');
 	if (!hash) return;
-	let length = Lengths[hash];
+	var length = Lengths[hash];
 	var arr = [];
 	for(var i = 1; i <= length; i++) {
-		arr.push(`<div class="swiper-slide"><img class="screenshot" src="img/${hash}/${i}.jpg" /></div>`);
+		arr.push('<div class="swiper-slide"><img class="screenshot" src="img/'+hash+'/'+i+'.jpg" /></div>');
 	}
 	document.querySelector('.swiper-wrapper').innerHTML = arr.join('');
 }
