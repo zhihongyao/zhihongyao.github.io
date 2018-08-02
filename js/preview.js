@@ -63,8 +63,8 @@ function appendImages() {
 	var length = Lengths[hash];
 	var arr = [];
 	for(var i = 1; i <= length; i++) {
-//		arr.push('<div class="swiper-slide"><img class="screenshot" src="img/'+hash+'/'+i+'.jpg" /></div>');
-		arr.push('<div class="swiper-slide"><img class="screenshot" src="img/webp/'+hash+'/'+i+'.webp" /></div>');
+		arr.push('<div class="swiper-slide"><img class="screenshot" src="img/'+hash+'/'+i+'.jpg" /></div>');
+//		arr.push('<div class="swiper-slide"><img class="screenshot" src="img/webp/'+hash+'/'+i+'.webp" /></div>');
 	}
 	document.querySelector('.swiper-wrapper').innerHTML = arr.join('');
 }
